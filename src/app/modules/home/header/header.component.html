@@ -1,0 +1,53 @@
+<header class="od-header" fxLayout="row" fxLayoutAlign="space-between center">
+  <section class="left-header-section" fxLayout="column" fxLayoutAlign="space-around start">
+    <section class="breadCrumb" fxLayout="row" fxLayoutAlign="space-between center">
+      <ng-container>
+        <div class="label"></div>
+        <div fxLayout="column" fxLayoutAlign="space-between center">
+          <i class="icon-arrow-down"></i>
+          <!-- <p-overlayPanel class="bread1" #breadcrumbPanel1="">
+            <ul class="campaign-options">
+              <li *ngFor="let option of bread.get('data')">{{ option }}</li>
+            </ul>
+          </p-overlayPanel> -->
+        </div>
+      </ng-container>
+    </section>
+    <section class="head"></section>
+  </section>
+  <button (click)="btn('rererere')"> CLICK</button>
+  <!-- <section class="right-header-section" fxLayout="row" fxLayoutAlign="end center">
+    <div class="ui-inputgroup" fxLayout="row" fxLayoutAlign="start center" *ngIf="routeComponent=='/inbox' || routeComponent=='/campaigns'">
+      <div class="tag-button" *ngIf="routeComponent=='/inbox'">
+        <button class="od-button secondary small" fxLayout="row" fxLayoutAlign="space-around center" (click)="searchParam.toggle($event)"><span>{{paramLabel}}</span><i class="icon-arrow-down"></i>
+          <p-overlayPanel class="searchParam" #searchParam="">
+            <ul>
+              <li (click)="changeSearchParam(0,'Tags','TAGS')">Tags</li>
+              <li (click)="changeSearchParam(1,'Customer Name', 'CUSTOMER_NAME')">Customer Name</li>
+              <li (click)="changeSearchParam(2, 'Customer Email Id', 'CUSTOMER_EMAIL')">Customer Email Id</li>
+              <li (click)="changeSearchParam(3,'Customer Feedback Text', 'FEEDBACK_TEXT')">Customer Feedback Text</li>
+              <li (click)="changeSearchParam(4,'Survey Name', 'SURVEY_NAME')">Survey Name</li>
+            </ul>
+          </p-overlayPanel>
+        </button>
+      </div><i class="icon-search"></i>
+      <form [formGroup]="searchForm" novalidate="novalidate" (ngSubmit)="save(searchForm.value, searchForm.valid)">
+        <input type="text" pInputText="" [placeholder]="placeholder" [(ngModel)]="searchName" name="name" formControlName="name" autocomplete="off" (click)="(routeComponent=='/inbox' &amp;&amp; param!=='FEEDBACK_TEXT') ? autoSuggest.toggle($event) : showRecentSearches($event, recentSearch)"/><i class="icon-close" (click)="clearSearch()" *ngIf="clear"></i>
+      </form>
+      <p-overlayPanel class="recentSearch" #recentSearch="">
+        <ul class="recent-campaigns">
+          <li>Recent searches</li>
+          <li fxLayout="row" fxLayoutAlign="space-between center" *ngFor="let campaign of recentCampaigns$ | async let index=index"><span (click)="selectRecentAndSearch(campaign)">{{ campaign.get('name') }}</span><i class="icon-close" (click)="deleteRecentCampaign(index, campaign.get('id'))"></i></li>
+        </ul>
+      </p-overlayPanel>
+      <p-overlayPanel class="recentSearch" #autoSuggest="">
+        <ul class="recent-campaigns">
+          <li>Start typing for suggestions..</li>
+          <li fxLayout="row" fxLayoutAlign="space-between center" *ngFor="let suggestion of suggestions$ | async let index=index"><span (click)="selectSuggestionAndSearch(suggestion)">{{ suggestion.get('name') }}</span></li>
+        </ul>
+      </p-overlayPanel>
+    </div><i class="icon-products" (click)="openOverlayPanel($event)"></i><img class="logged-user" odImgFallback="" [src]="getBrandImage()" (click)="openLoginPanel($event)"/>
+  </section> -->
+</header>
+<!-- <od-all-products-dialog #allproducts=""></od-all-products-dialog>
+<od-login-dialog #logindialog=""></od-login-dialog> -->

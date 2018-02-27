@@ -1,0 +1,123 @@
+@import "./../../../styles/base/_variables.scss";
+@import "./../../../styles/base/_mixins.scss";
+:host {
+  display: block;
+  margin-bottom: 69px;
+}
+.od-header {
+  background: #fff;
+  padding: 8.5px 1.4375rem;
+  border-bottom: 1px solid grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  section.left-header-section {
+    flex-basis: 50%;
+    margin-left: 3.7812rem;
+    section.breadCrumb {
+      color: $primary-text-color;
+      font-size: 0.6875rem;
+      div {
+        position: relative;
+        i.icon-arrow-down {
+          color: $font-grey;
+          margin: 0px 4px;
+          font-size: 0.5rem;
+          cursor: pointer;
+          margin-top: 2px;
+          position: relative;
+        }
+      }
+    }
+    section.head {
+      color: $primary-text-color;
+      font-size: 1.125rem;
+    }
+  }
+  section.right-header-section {
+    flex-basis: 50%;
+    i.icon-notification {
+      font-size: 1.375rem;
+      color: $font-grey;
+      cursor: pointer;
+      margin-left: 30px;
+    }
+    i.icon-products {
+      font-size: 1.25rem;
+      color: $font-grey;
+      cursor: pointer;
+      margin-left: 30px;
+    }
+    i.icon-arrow-down {
+      font-size: 0.5rem;
+    }
+    img.logged-user {
+      display: inline-block;
+      border-radius: 2px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      margin-left: 30px;
+    }
+    .ui-inputgroup {
+      position: relative;
+      border: 1px solid $border-grey;
+      border-radius: 2px;
+      .tag-button {
+        border-right: 1px solid $border-grey;
+        padding: 0px 8px;
+        padding-right: 0px;
+        .od-button.small {
+          font-size: 0.6875rem;
+          color: $primary-text-color;
+          background: #fff !important;
+          border: none !important;
+          padding: 0 !important;
+          i {
+            margin-left: 0.9375rem;
+          }
+        }
+      }
+      i.icon-search {
+        color: $font-grey;
+        background: #fff;
+        padding: 7px 8px;
+      }
+      form {
+        position: relative;
+        i.icon-close {
+          position: absolute;
+          right: 0;
+          top: -2px;
+          padding: 8px;
+          font-size: 8px;
+          cursor: pointer;
+          background: #fff;
+        }
+        input {
+          border: none !important;
+          padding: 0;
+          font-size: 0.6875rem;
+          font-weight: 400;
+          color: $font-grey;
+          font-family: Lato;
+          margin: 0;
+          border-radius: $border-radius;
+          width: 11.6875rem;
+          &:focus {
+            outline: none;
+            box-shadow: none !important;
+          }
+          &.full-width {
+            width: 100%;
+          }
+          &::placeholder {
+            color: $font-grey;
+          }
+        }
+      }
+    }
+  }
+}

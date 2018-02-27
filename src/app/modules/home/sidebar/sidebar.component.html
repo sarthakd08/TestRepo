@@ -1,0 +1,22 @@
+<nav class="nav-container collapsed">
+  <ul>
+    <li class="has-subnav logo">
+      <a>
+        <i class="fa sidebar-icon sprite odlogo"></i>
+      </a>
+    </li>
+    <div class="wrapper" *ngFor="let item of urlList; let index=index;">
+      <li class="has-subnav border-bottom" (click)="toggleSubMenu(index,'show')" routerLinkActive="active" *ngIf="item.title !== 'Settings'">
+        <a #anchor="" tooltipPosition="right" tooltipStyleClass="sidebar-tooltip" [routerLink]="[item.url]">
+          <i class="fa sidebar-icon" [ngClass]="item.className"></i>
+        </a>
+      </li>
+      <li class="has-subnav border-bottom" (click)="toggleSubMenu(index,'show')" routerLinkActive="active" *ngIf="item.title === 'Settings'"
+        #settingsTab="">
+        <a #anchor="" tooltipPosition="right" tooltipStyleClass="sidebar-tooltip" [routerLink]="[item.url]">
+          <i class="fa sidebar-icon" [ngClass]="item.className"></i>
+        </a>
+      </li>
+    </div>
+  </ul>
+</nav>
